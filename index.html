@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sbalit na dovolenou</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg">
+<meta name="theme-color" content="#2a8fbd">
 <style>
   :root { --bg:#f3f6fa; --card:#fff; --text:#1f2a37; --muted:#6b7785; --accent:#2a8fbd; --done:#9aa5b1; }
   * { box-sizing: border-box; }
@@ -140,6 +143,7 @@ document.getElementById('reset').onclick = () => {
 };
 
 render();
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
 </script>
 </body>
 </html>
